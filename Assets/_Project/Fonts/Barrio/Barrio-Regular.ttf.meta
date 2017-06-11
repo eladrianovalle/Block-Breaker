@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: caab2576ddd0b49a68e9899aa81f64f0
+timeCreated: 1496596532
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Barrio
+  fontNames:
+  - Barrio
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

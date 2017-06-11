@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 3f4ffa6b9cfa14c538bbf40d7c8cdbe5
+timeCreated: 1496596532
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Bungee Inline
+  fontNames:
+  - Bungee Inline
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

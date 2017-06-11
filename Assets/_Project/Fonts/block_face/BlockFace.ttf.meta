@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 8a7ae55c360a1437faef76c5cdbde44b
+timeCreated: 1496596842
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Block Face
+  fontNames:
+  - Block Face
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
