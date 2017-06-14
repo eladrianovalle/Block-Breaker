@@ -6,14 +6,14 @@ public class LoseCollider : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D collision) {
 		print ("Collision2D!");
-		if (collision.gameObject.tag == "Player") {
+		if (collision.gameObject.tag == "Ball") {
 			LevelManager.LoadLose ();
 		}
 	}
 
 	void OnCollisionEnter(Collision collision) {
 		print ("Collision!");
-		if (collision.gameObject.tag == "Player") {
+		if (collision.gameObject.tag == "Ball") {
 			LevelManager.LoadLose ();
 		}
 	}

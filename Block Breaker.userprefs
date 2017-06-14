@@ -1,11 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Project/Scripts/Ball.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Project/Scripts/LoseCollider.cs">
     <Files>
-      <File FileName="Assets/_Project/Scripts/Ball.cs" Line="29" Column="1" />
-      <File FileName="Assets/_Project/Scripts/Paddle.cs" Line="15" Column="28" />
+      <File FileName="Assets/_Project/Scripts/Ball.cs" Line="15" Column="1" />
+      <File FileName="Assets/_Project/Scripts/Brick.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Project/Scripts/Paddle.cs" Line="1" Column="1" />
       <File FileName="Assets/_Project/Scripts/MusicManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Project/Scripts/LoseCollider.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Project/Scripts/LoseCollider.cs" Line="16" Column="40" />
       <File FileName="Assets/_Project/Scripts/LevelManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
