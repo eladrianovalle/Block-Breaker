@@ -6,8 +6,16 @@ public class Ball : MonoBehaviour {
 
 	public Paddle paddle;
 
+	private Rigidbody2D rBody;
 	private Vector3 paddleToBallVector;
 	private bool hasStarted = false;
+
+	private AudioSource audio;
+
+	void Awake() {
+		rBody = this.GetComponent<Rigidbody2D> ();
+		audio = gameObject.GetComponent<AudioSource> ();
+	}
 
 	void Start () {
 		if (paddle == null) {
@@ -22,10 +30,20 @@ public class Ball : MonoBehaviour {
 		
 
 			if (Input.GetMouseButtonDown (0)) {
-				print ("Mouse button clicked, ball launched!");
 				hasStarted = true;
-				this.GetComponent<Rigidbody2D> ().velocity = new Vector2 (2f, 10f);
+				rBody.velocity = new Vector2 (2f, 10f);
 			}
+		}
+	}
+
+	void OnCollisionExit2D(Collision2D hit) {
+		if (hasStarted) {
+			Vector2 velocityTweak = new Vector2 (Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f));
+			rBody.velocity += velocityTweak;
+
+			print ("The current velocity: " + rBody.velocity + " the velocity tweak: " + velocityTweak);
+
+			audio.Play ();
 		}
 	}
 }

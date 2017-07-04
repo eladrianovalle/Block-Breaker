@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114229699629348366}
   m_Layer: 0
   m_Name: 1 Hit Block
-  m_TagString: Untagged
+  m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 307185a0a5db4407586fb7d3e857901d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHits: 1
+  crack: {fileID: 8300000, guid: fbbb54288834643cbb9ebaf76885c0b2, type: 3}
+  smokeVFX: {fileID: 1691817125325698, guid: 3308e931713a14cb2bf7ed29e5304695, type: 2}
+  hitSprites: []
 --- !u!212 &212964216768106666
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -111,7 +113,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e5cf9670c38e64b389004dc0b4b3fb58, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e48c9ab54b554e84aab1af7230f19c5, type: 3}
   m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0

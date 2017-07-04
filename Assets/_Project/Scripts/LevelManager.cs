@@ -5,22 +5,35 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
-	public void LoadLevel(string level) {
-		Debug.Log ("Level load call for level: "+level);
+	public static void LoadLevel(string level) {
+		Brick.breakableBricks = 0;
 		SceneManager.LoadScene (level);
-
 	}
 
 	public void QuitRequest() {
-		Debug.Log ("Quit request received!");
 		Application.Quit ();
 	}
 
 	public static void LoadWin() {
-		SceneManager.LoadScene ("Win");
+		LoadLevel ("Win");
 	}
 
 	public static void LoadLose() {
-		SceneManager.LoadScene ("Lose");
+		LoadLevel ("Lose");
 	}
+
+	public static void LoadNextLevel() {
+		Brick.breakableBricks = 0;
+		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
+	}
+
+	public static void BrickDestroyed() {
+		if (Brick.breakableBricks <= 0) {
+			LoadNextLevel ();
+		}
+	}
+
+
 }
+
+

@@ -4,19 +4,35 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour {
 
-	// Use this for initialization
+	public bool autoPlay = false;
+	public float minX, maxX;
+
+	private Ball ball;
+
 	void Start () {
+		ball = GameObject.FindObjectOfType<Ball> ();
 	}
-	
+
 	void Update () {
-		ControlPaddleMovement ();
+		if (autoPlay) {
+			AutoPlay ();
+		} else {
+			ControlPaddleWithMouse ();
+		}
 	}
 
-	void ControlPaddleMovement() {
+	void ControlPaddleWithMouse() {
 		float mousePosInWorldBlocks = Input.mousePosition.x / Screen.width * 16;
-
 		Vector3 paddlePos = new Vector3 (0, this.transform.position.y, 0);
-		paddlePos.x = Mathf.Clamp (mousePosInWorldBlocks, .5f, 15.5f);
+		paddlePos.x = Mathf.Clamp (mousePosInWorldBlocks, minX, maxX);
+
+		this.transform.position = paddlePos;
+	}
+
+	void AutoPlay() {
+		Vector3 paddlePos = new Vector3 (0, this.transform.position.y, 0);
+		Vector3 ballPos = ball.transform.position;
+		paddlePos.x = Mathf.Clamp (ballPos.x, minX, maxX);
 
 		this.transform.position = paddlePos;
 	}
